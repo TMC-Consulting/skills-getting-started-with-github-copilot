@@ -25,12 +25,19 @@ document.addEventListener("DOMContentLoaded", () => {
 
         const spotsLeft = details.max_participants - details.participants.length;
         const participantsList = details.participants
-          .map(participant => `
-            <li>
-              <span>${participant}</span>
-              <button class="delete-btn" data-activity="${name}" data-email="${participant}" title="Remove participant">✕</button>
-            </li>
-          `)
+          .map(participant => {
+            const item = document.createElement("li");
+            const participantLabel = document.createElement("span");
+            participantLabel.textContent = participant;
+            const removeButton = document.createElement("button");
+            removeButton.className = "delete-btn";
+            removeButton.dataset.activity = name;
+            removeButton.dataset.email = participant;
+            removeButton.title = "Remove participant";
+            removeButton.textContent = "✕";
+            item.append(participantLabel, removeButton);
+            return item.outerHTML;
+          })
           .join("");
 
         activityCard.innerHTML = `
