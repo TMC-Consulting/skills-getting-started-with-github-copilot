@@ -8,21 +8,31 @@
   </head>
   <body>
     <header>
-      <h1>Mergington High School</h1>
-      <h2>Extracurricular Activities</h2>
+      <div class="header-content">
+        <div class="header-decoration">✦</div>
+        <h1>Mergington High School</h1>
+        <h2>Extracurricular Activities</h2>
+        <div class="header-decoration">✦</div>
+      </div>
     </header>
 
     <main>
-      <section id="activities-container">
-        <h3>Available Activities</h3>
+      <section id="activities-container" class="elegant-section">
+        <div class="section-header">
+          <h3>Available Activities</h3>
+          <div class="accent-line"></div>
+        </div>
         <div id="activities-list">
           <!-- Activities will be loaded here -->
           <p>Loading activities...</p>
         </div>
       </section>
 
-      <section id="signup-container">
-        <h3>Sign Up for an Activity</h3>
+      <section id="signup-container" class="elegant-section">
+        <div class="section-header">
+          <h3>Sign Up for an Activity</h3>
+          <div class="accent-line"></div>
+        </div>
         <form id="signup-form">
           <div class="form-group">
             <label for="email">Student Email:</label>
@@ -35,14 +45,16 @@
               <!-- Activity options will be loaded here -->
             </select>
           </div>
-          <button type="submit">Sign Up</button>
+          <button type="submit" class="submit-btn">Sign Up</button>
         </form>
         <div id="message" class="hidden"></div>
       </section>
     </main>
 
     <footer>
+      <div class="footer-decoration">✦</div>
       <p>&copy; 2023 Mergington High School</p>
+      <div class="footer-decoration">✦</div>
     </footer>
 
     <script src="app.js"></script>
